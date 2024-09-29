@@ -647,17 +647,30 @@ namespace InClassChallenge4._5
 
         private void gameRestartToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
             timesClicked = 0;
             gametime = 0;
             safeSquares = 0;
             bombs = 0;
-            this.Controls.Clear();
-            timer1.Stop();
-            InitializeComponent();
-            
-            CreateButtons();
+
+            for (int row = 0; row < guessButtons.GetLength(1); row++)
+            {
+                for (int col = 0; col < guessButtons.GetLength(0); col++)
+                {
+                    if (guessButtons[col, row].CellTextBox.Text == bombIndicator)
+                    {
+                        guessButtons[col, row].CellTextBox.Clear();
+                    }
+
+                    if (guessButtons[col, row].CellButton.Visible == false)
+                    {
+                        guessButtons[col, row].CellButton.Visible = true;
+                    }
+
+                    guessButtons[col, row].CellButton.Enabled = true;
+                }
+            }
         }
+            
 
         private void quitToolStripMenuItem1_Click(object sender, EventArgs e)
         {
