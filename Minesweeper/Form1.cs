@@ -665,8 +665,8 @@ namespace InClassChallenge4._5
                     {
                         guessButtons[col, row].CellButton.Visible = true;
                     }
-
                     guessButtons[col, row].CellButton.Enabled = true;
+                    guessButtons[col, row].CellButton.BackColor = Color.Gray;
                 }
             }
         }
