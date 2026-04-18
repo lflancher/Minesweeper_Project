@@ -511,7 +511,7 @@ namespace InClassChallenge4._5
                     {
                         if (guessButtons[col + 1, row + 1].CellButton.BackColor == Color.OrangeRed)
                         {
-                            flagsaround++;
+                            flagsaround = flagsaround + 2;
                         }
                         
                     }
@@ -544,7 +544,7 @@ namespace InClassChallenge4._5
             /// </summary>
             Random r = new Random();
             int maxbombs;
-            maxbombs = 40;
+            maxbombs = 100;
             for (int bombsPlaced = 0; bombsPlaced < maxbombs; bombsPlaced++)
             {
 
