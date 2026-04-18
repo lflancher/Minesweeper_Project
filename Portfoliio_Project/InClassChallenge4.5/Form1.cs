@@ -111,12 +111,7 @@ namespace InClassChallenge4._5
             {
                 
                 timer1.Enabled = true;
-                timer1.Start();
-                int clickedRow = e.Row;
-                int clickedCol = e.Col;
-                //call the place bombs function
-                placeBombs(clickedRow, clickedCol);
-                for (int row = 0; row < guessButtons.GetLength(1); row++)
+                timer1.Start();ttons.GetLength(1); row++)
                 {
                     for (int col = 0; col < guessButtons.GetLength(0); col++)
                     {
@@ -193,10 +188,6 @@ namespace InClassChallenge4._5
                 if (e.Col < guessButtons.GetLength(0) - 1)
                 {
 
-                    if (guessButtons[e.Col + 1, e.Row].CellTextBox.Text != bombIndicator && guessButtons[e.Col, e.Row].CellTextBox.Text == zeroIndicator)
-                    {
-                        guessButtons[e.Col + 1, e.Row].CellButton.PerformClick();
-                    }
 
                 }
 
